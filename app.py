@@ -36,7 +36,8 @@ if prompt := st.chat_input("Say something to Ezz..."):
         try:
             # Call FastAPI backend
             response = requests.post(
-                "http://127.0.0.1:8000/chat",
+                # "http://127.0.0.1:8000/chat",
+                "https://ezz-chatbot-backend.up.railway.app/chat",
                 json={"prompt": prompt, "session_id": st.session_state.session_id}
             )
 
